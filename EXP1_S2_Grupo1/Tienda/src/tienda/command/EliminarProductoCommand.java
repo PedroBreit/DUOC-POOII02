@@ -1,18 +1,21 @@
 package tienda.command;
 
-import tienda.decorator.Componente;
+/**
+ * Comando concreto que encapsula la acción de eliminar
+ * un producto del carrito por su nombre.
+ */
 
 public class EliminarProductoCommand implements Command {
-    private Carrito carrito;
-    private Componente producto;
+    private final Carrito carrito;
+    private final String nombreProducto;
 
-    public EliminarProductoCommand(Carrito carrito, Componente producto) {
+    public EliminarProductoCommand(Carrito carrito, String nombreProducto) {
         this.carrito = carrito;
-        this.producto = producto;
+        this.nombreProducto = nombreProducto;
     }
 
     @Override
-    public void ejecutar() {
-        carrito.eliminarProducto(producto);
+    public void Ejecutar() {
+        carrito.eliminarPorNombre(nombreProducto);
     }
 }

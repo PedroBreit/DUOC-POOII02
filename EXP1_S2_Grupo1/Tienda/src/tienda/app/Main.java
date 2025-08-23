@@ -1,32 +1,35 @@
 package tienda.app;
 
+import tienda.model.Producto;
 import tienda.decorator.*;
-import tienda.singleton.*;
 import tienda.command.*;
+
+/**
+ * Clase de entrada principal.
+ * Demuestra el uso combinado de los patrones Singleton,
+ * Decorator y Command en el sistema de pedidos.
+ */
 
 public class Main {
     public static void main(String[] args) {
-        // Singleton
-        DiscountManager gestorDescuentos = DiscountManager.getInstance();
+        Producto camisa = new Producto("Camisa Oxford", "camisas", 20000);
+        Producto jeans  = new Producto("Jeans Slim", "pantalones", 30000);
 
-        // Producto base
-        Componente producto1 = new Producto("Camisa", 20000);
+        // Definición de políticas de descuento (Decorator acumula porcentajes)
+        Component politicaCamisa = new Descuento10(
+                new DescuentoCategoria("camisas", 0.20, new PoliticaBase())
+        );
+        Component politicaJeans = new Descuento10(new PoliticaBase());
 
-        // Decorator aplicado (10% + categoría 20%)
-        Componente productoConDescuento = new Descuento10(new DescuentoCategoria(producto1));
-
-        System.out.println(productoConDescuento.getDescripcion());
-        System.out.println("Precio final: $" + productoConDescuento.getPrecio());
-
-        // Command
         Carrito carrito = new Carrito();
-        Command agregar = new AgregarProductoCommand(carrito, productoConDescuento);
-        Command eliminar = new EliminarProductoCommand(carrito, productoConDescuento);
+        Invocador inv = new Invocador();
 
-        Invocador invocador = new Invocador();
-        invocador.agregarComando(agregar);
-        invocador.agregarComando(eliminar);
+        // Se crean y encolan los comandos
+        inv.agregar(new AgregarProductoCommand(carrito, camisa, politicaCamisa));
+        inv.agregar(new AgregarProductoCommand(carrito, jeans, politicaJeans));
+        inv.agregar(new EliminarProductoCommand(carrito, "Jeans Slim"));
 
-        invocador.ejecutarComandos();
+        // Ejecución de todos los comandos
+        inv.ejecutarTodos();
     }
 }

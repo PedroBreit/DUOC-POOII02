@@ -5,16 +5,17 @@
         <group>
             <file>file:/G:/Mi%20unidad/Analista%20programador%20computacional/Desarrollo%20orientado%20a%20objetos%20II/Semana%202/Tienda/src/tienda/app/Main.java</file>
             <file>file:/G:/Mi%20unidad/Analista%20programador%20computacional/Desarrollo%20orientado%20a%20objetos%20II/Semana%202/Tienda/src/tienda/singleton/DiscountManager.java</file>
-            <file>file:/G:/Mi%20unidad/Analista%20programador%20computacional/Desarrollo%20orientado%20a%20objetos%20II/Semana%202/Tienda/src/tienda/decorator/Componente.java</file>
-            <file>file:/G:/Mi%20unidad/Analista%20programador%20computacional/Desarrollo%20orientado%20a%20objetos%20II/Semana%202/Tienda/src/tienda/decorator/Producto.java</file>
-            <file>file:/G:/Mi%20unidad/Analista%20programador%20computacional/Desarrollo%20orientado%20a%20objetos%20II/Semana%202/Tienda/src/tienda/decorator/DescuentoDecorator.java</file>
-            <file>file:/G:/Mi%20unidad/Analista%20programador%20computacional/Desarrollo%20orientado%20a%20objetos%20II/Semana%202/Tienda/src/tienda/decorator/DescuentoCategoria.java</file>
-            <file>file:/G:/Mi%20unidad/Analista%20programador%20computacional/Desarrollo%20orientado%20a%20objetos%20II/Semana%202/Tienda/src/tienda/decorator/Descuento10.java</file>
+            <file>file:/G:/Mi%20unidad/Analista%20programador%20computacional/Desarrollo%20orientado%20a%20objetos%20II/Semana%202/Tienda/src/tienda/decorator/Component.java</file>
             <file>file:/G:/Mi%20unidad/Analista%20programador%20computacional/Desarrollo%20orientado%20a%20objetos%20II/Semana%202/Tienda/src/tienda/command/Command.java</file>
             <file>file:/G:/Mi%20unidad/Analista%20programador%20computacional/Desarrollo%20orientado%20a%20objetos%20II/Semana%202/Tienda/src/tienda/command/Carrito.java</file>
             <file>file:/G:/Mi%20unidad/Analista%20programador%20computacional/Desarrollo%20orientado%20a%20objetos%20II/Semana%202/Tienda/src/tienda/command/AgregarProductoCommand.java</file>
             <file>file:/G:/Mi%20unidad/Analista%20programador%20computacional/Desarrollo%20orientado%20a%20objetos%20II/Semana%202/Tienda/src/tienda/command/EliminarProductoCommand.java</file>
             <file>file:/G:/Mi%20unidad/Analista%20programador%20computacional/Desarrollo%20orientado%20a%20objetos%20II/Semana%202/Tienda/src/tienda/command/Invocador.java</file>
+            <file>file:/G:/Mi%20unidad/Analista%20programador%20computacional/Desarrollo%20orientado%20a%20objetos%20II/Semana%202/Tienda/src/tienda/model/Producto.java</file>
+            <file>file:/G:/Mi%20unidad/Analista%20programador%20computacional/Desarrollo%20orientado%20a%20objetos%20II/Semana%202/Tienda/src/tienda/decorator/PoliticaBase.java</file>
+            <file>file:/G:/Mi%20unidad/Analista%20programador%20computacional/Desarrollo%20orientado%20a%20objetos%20II/Semana%202/Tienda/src/tienda/decorator/Decorator.java</file>
+            <file>file:/G:/Mi%20unidad/Analista%20programador%20computacional/Desarrollo%20orientado%20a%20objetos%20II/Semana%202/Tienda/src/tienda/decorator/Descuento10.java</file>
+            <file>file:/G:/Mi%20unidad/Analista%20programador%20computacional/Desarrollo%20orientado%20a%20objetos%20II/Semana%202/Tienda/src/tienda/decorator/DescuentoCategoria.java</file>
         </group>
     </open-files>
 </project-private>

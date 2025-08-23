@@ -3,17 +3,18 @@ package tienda.command;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Clase Invocador del patrón Command.
+ * Contiene una lista de comandos y los ejecuta en orden.
+ */
+
 public class Invocador {
-    private List<Command> comandos = new ArrayList<>();
+    private final List<Command> cola = new ArrayList<>();
 
-    public void agregarComando(Command comando) {
-        comandos.add(comando);
-    }
+    public void agregar(Command c) { cola.add(c); }
 
-    public void ejecutarComandos() {
-        for (Command comando : comandos) {
-            comando.ejecutar();
-        }
-        comandos.clear();
+    public void ejecutarTodos() {
+        for (Command c : cola) c.Ejecutar();
+        cola.clear();
     }
 }
