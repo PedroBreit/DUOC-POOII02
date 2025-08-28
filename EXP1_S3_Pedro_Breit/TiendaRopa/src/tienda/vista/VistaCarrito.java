@@ -6,7 +6,7 @@ import tienda.modelo.Producto;
 /* Lista lo que hay en el carrito y el total sin descuento. */
 public class VistaCarrito {
     public void mostrarCarrito(Pedido pedido) {
-    System.out.println("=== CARRITO de " + pedido.getUsuario().getNombre() + " ==="); // <- muestra el dueño
+    System.out.println("=== CARRITO de " + pedido.getUsuario().getNombre() + " ===");
     int i = 1;
     for (Producto p : pedido.getProductos()) {
         System.out.printf("%d) %s | %s | $%.0f%n", i++, p.getNombre(), p.getCategoria(), p.getPrecio());

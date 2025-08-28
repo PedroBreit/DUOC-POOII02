@@ -8,7 +8,7 @@ import tienda.modelo.DctoPorce;
 public class AplicarDctoPorce implements Command {
     private final Descuentos controlador;
     private final Componente productoBase;
-    private final double porcentaje; // 0..1
+    private final double porcentaje;
     private final java.util.function.Consumer<Double> callbackResultado;
 
     public AplicarDctoPorce(Descuentos controlador,

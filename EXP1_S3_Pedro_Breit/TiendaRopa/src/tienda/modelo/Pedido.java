@@ -10,12 +10,12 @@ public class Pedido {
     private final Usuario usuario;
     private final List<Producto> productos = new ArrayList<>();
 
-    public Pedido(Usuario usuario) {              // <- nuevo constructor
+    public Pedido(Usuario usuario) {           
         if (usuario == null) throw new IllegalArgumentException("usuario null");
         this.usuario = usuario;
     }
     
-    public Usuario getUsuario() {                 // <- getter
+    public Usuario getUsuario() {            
         return usuario;
     }
     

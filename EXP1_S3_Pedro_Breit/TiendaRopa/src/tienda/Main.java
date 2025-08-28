@@ -37,20 +37,11 @@ public class Main {
         vistaCarrito.mostrarTotalSinDescuento(ctrlPedidos.totalSinDescuento());
 
         // Descuentos (commands con callback -> imprime en vista)
-        new AplicarDctoPorce(
-                ctrlDescuentos, p1, 0.10,
-                total -> vistaDesc.mostrarPrecioFinal(p1.getNombre(), total)
-        ).ejecutar();
+        new AplicarDctoPorce( ctrlDescuentos, p1, 0.10, total -> vistaDesc.mostrarPrecioFinal(p1.getNombre(), total)).ejecutar();
 
-        new AplicarDctoCateg(
-                ctrlDescuentos, p2, Categoria.PANTALONES, 0.20,
-                total -> vistaDesc.mostrarPrecioFinal(p2.getNombre(), total)
-        ).ejecutar();
+        new AplicarDctoCateg(ctrlDescuentos, p2, Categoria.PANTALONES, 0.20,total -> vistaDesc.mostrarPrecioFinal(p2.getNombre(), total)).ejecutar();
 
         // Un tercero sin descuento de categoría
-        new AplicarDctoPorce(
-                ctrlDescuentos, p3, 0.10,
-                total -> vistaDesc.mostrarPrecioFinal(p3.getNombre(), total)
-        ).ejecutar();
+        new AplicarDctoPorce(ctrlDescuentos, p3, 0.10, total -> vistaDesc.mostrarPrecioFinal(p3.getNombre(), total)).ejecutar();
     }
 }

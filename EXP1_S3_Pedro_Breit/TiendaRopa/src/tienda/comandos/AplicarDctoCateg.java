@@ -10,7 +10,7 @@ public class AplicarDctoCateg implements Command {
     private final Descuentos controlador;
     private final Componente productoBase;
     private final Categoria categoriaObjetivo;
-    private final double porcentaje; // 0..1
+    private final double porcentaje;
     private final java.util.function.Consumer<Double> callbackResultado;
 
     public AplicarDctoCateg(Descuentos controlador,
